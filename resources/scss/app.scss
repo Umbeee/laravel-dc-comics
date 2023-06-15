@@ -1,0 +1,143 @@
+@import '~bootstrap/scss/bootstrap';
+
+@import '~bootstrap/scss/bootstrap';
+
+
+// HEADER ///////////////////
+#pre-header {
+    background-color: rgb(2, 130, 249);
+    color: white;
+    height: 40px;
+}
+
+#pre-header .container {
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+}
+
+#logo-header {
+    height: 100px;
+}
+
+.header {
+    background-color: white;
+    height: 150px;
+
+
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+
+        ul {
+            display: flex;
+            gap: 10px;
+            line-height: 147px;
+
+            li {
+                list-style-type: none;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                    text-transform: uppercase;
+                    font-size: 0.8em;
+                    font-weight: bold;
+                }
+            }
+
+            li:hover {
+                border-bottom: 4px solid rgb(12, 124, 236);
+
+                a {
+                    color: rgb(12, 124, 236);
+                }
+            }
+        }
+
+
+    }
+
+}
+
+.jumbo {
+    background-image: url('../images/jumbotron.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+//////CONTAINER BLU SOTTO SEZIONE CARDS///////////////
+.main {
+    background-color: rgb(2, 130, 249);
+    color: white;
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        div {
+            display: flex;
+            align-items: center;
+            width: 15%;
+            gap: 15px;
+
+
+
+            p {
+                text-transform: uppercase;
+                font-size: 0.8em;
+            }
+        }
+    }
+}
+
+.jumbo-footer {
+    height: 400px;
+    background-image: url('../images/footer-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+.footer {
+    height: 100px;
+    background-color: rgb(48, 48, 48);
+    color: white;
+}
+
+.container-footer {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+p {
+    padding: 0.8em;
+    color: white;
+    font-weight: bold;
+}
+
+.socials {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+img {
+    height: 2em;
+}
