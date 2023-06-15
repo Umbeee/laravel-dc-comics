@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ComicController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,12 +13,5 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
+Route::get('/', [ ComicController::class, 'index' ])->name( 'home' );
 
-    $title = 'Home';
-
-    $comics = config( 'db.comics' );
-
-    return view('pages.index', compact('title', 'comics') );
-
-})->name( 'home' );

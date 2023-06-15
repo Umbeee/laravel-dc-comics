@@ -44,15 +44,16 @@
         <div class="container">
 
             <div class="row g-4">
-                @foreach( $comics as $elem)
+                
+                @foreach( $comics as $elem )
                     <div class="text-start col-2">
-                        <img class="card-img-top" src="https://picsum.photos/300" alt="{{ $elem['title'] }}">
-                        <!-- {{ $elem['thumb'] }} -->
+                        <img class="card-img-top" src="{{ $elem->thumb }}" alt="{{ $elem->title }}">
                         <div class="card-body">
-                        <h5 class="card-title">{{ $elem['title'] }}</h5>
+                        <h5 class="card-title">{{ $elem->title }}</h5>
                       </div>
                     </div>
                 @endforeach
+                
             </div>
             <div class="text-center pb-3">
                 <a name="" id="" class="btn btn-primary text-uppercase" href="#" role="button">load more</a>
