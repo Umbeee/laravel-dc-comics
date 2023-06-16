@@ -22,9 +22,37 @@ class ComicController extends Controller
 
 
 
-    // public function create(){
+    public function create(){
 
-    //     return view( 'pages.create' );
+        return view( 'pages.create' );
 
-    // }
+    }
+
+    public function update($id){
+
+
+        $singleComic = Comic::findOrFail( $id );
+        return view( 'pages.update', compact('singleComic') );
+
+    }
+
+    public function show ($id){
+
+
+        $singleComic = Comic::findOrFail( $id );
+
+        return view( 'pages.show', compact('singleComic') );
+
+    }
+
+    public function store(Request $request){
+
+        $form_data = $request->All();
+
+        $newComic = new Comic();
+        $newComic->fill($form_data);
+        $newComic->save();
+
+        return redirect()->route('comics.index');
+    }
 }

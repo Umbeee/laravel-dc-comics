@@ -13,14 +13,12 @@
 <!-- fixare immagini dei social -->
 <div class="footer">
         <div class="container">
-            <a name="" id="btn-footer" class="btn" href="#" role="button">Button</a>
-            <div class="socials">
-                <p>follow us</p>
-                <img src="../assets/img/footer-facebook.png" alt="fb logo">
-                <img src="../assets/img/footer-twitter.png" alt="tw logo">
-                <img src="../assets/img/footer-youtube.png" alt="yt logo">
-                <img src="../assets/img/footer-pinterest.png" alt="pt logo">
-                <img src="../assets/img/footer-periscope.png" alt="pr logo">
+            <div class="socials p-4">
+                <img src="{{ Vite::asset('resources/images/footer-facebook.png') }}" alt="fb logo">
+                <img src="{{ Vite::asset('resources/images/footer-twitter.png') }}" alt="tw logo">
+                <img src="{{ Vite::asset('resources/images/footer-youtube.png') }}" alt="yt logo">
+                <img src="{{ Vite::asset('resources/images/footer-pinterest.png') }}" alt="pt logo">
+                <img src="{{ Vite::asset('resources/images/footer-periscope.png') }}" alt="pr logo">
             </div>
         </div>
     </div>

@@ -43,24 +43,22 @@
         <div class="jumbo"></div>
         <div class="container">
 
-            <div class="row g-4">
+            <div class="row g-4 pb-5">
                 
                 @foreach( $comics as $elem )
                     <div class="text-start col-2">
-                        <img class="card-img-top" src="{{ $elem->thumb }}" alt="{{ $elem->title }}">
-                        <div class="card-body">
-                        <h5 class="card-title">{{ $elem->title }}</h5>
+                        <a href="{{ route('comics.show', ['comic'=> $elem->id]  )}}" class="text-reset text-decoration-none">
+                            <img class="card-img-top cards-img" src="{{ $elem->thumb }}" alt="{{ $elem->title }}">
+                            <div class="card-body">
+                            <h5 class="card-title">{{ $elem->title }}</h5>
+                        </a>
                       </div>
                     </div>
                 @endforeach
                 
             </div>
-            <div class="text-center pb-3">
-                <a name="" id="" class="btn btn-primary text-uppercase" href="#" role="button">load more</a>
-            </div>
-            <div>
-
-            </div>
+          
+           
         </div>
     </main>
 
@@ -93,7 +91,6 @@
     </div>
 
      @include( 'partials.footer' ) 
-
 </body>
 
 </html>
