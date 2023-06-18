@@ -8,31 +8,31 @@
         @method('PUT')
 
         <div class="form-group">
-            <input class="form-input" type="text" name="title" placeholder="titolo" value="{{ old('title') ?? $comic->title }}">
+            <input class="form-control" type="text" name="title" placeholder="titolo" value="{{ old('title') ?? $comic->title }}">
         </div>
 
         <div class="form-group">
-        <textarea class="form-input" type="text" name="description" placeholder="description" >{{ old('description') ?? $comic->description }}</textarea>
+        <textarea class="form-control" type="text" name="description" placeholder="description" >{{ old('description') ?? $comic->description }}</textarea>
         </div>
 
         <div class="form-group">
-            <input class="form-input" type="text" name="thumb" placeholder="thumb" value="{{ old('thumb') ?? $comic->thumb }}">
+            <input class="form-control" type="text" name="thumb" placeholder="thumb" value="{{ old('thumb') ?? $comic->thumb }}">
         </div>
 
         <div>
-            <input type="text" name="price" placeholder="price" value="{{ old('price') ?? $comic->price }}">
+            <input class="form-control" type="text" name="price" placeholder="price" value="{{ old('price') ?? $comic->price }}">
         </div>
 
         <div class="form-group">
-            <input class="form-input" type="text" name="series" placeholder="series" value="{{ old('series') ?? $comic->series }}">
+            <input class="form-control" type="text" name="series" placeholder="series" value="{{ old('series') ?? $comic->series }}">
         </div>
 
         <div class="form-group">
-            <input class="form-input" type="date" name="sale_date" value="{{ old('sale_date') ?? $comic->sale_date }}">
+            <input class="form-control" type="date" name="sale_date" value="{{ old('sale_date') ?? $comic->sale_date }}">
         </div>
 
         <div class="form-group">
-            <input class="form-input" type="text" name="type" placeholder="type" value="{{ old('type') ?? $comic->type }}">
+            <input class="form-control" type="text" name="type" placeholder="type" value="{{ old('type') ?? $comic->type }}">
         </div>
         <button type="submit" class="btn btn-primary">invia</button>
     </form>

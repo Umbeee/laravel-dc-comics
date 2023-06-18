@@ -6,32 +6,32 @@
 
         @csrf
 
-        <div class="form-group">
-            <input class="form-input" type="text" name="title" placeholder="titolo">
+        <div class="form-group mb-3">
+            <input class="form-control" type="text" name="title" placeholder="titolo">
         </div>
 
         <div class="form-group">
-            <textarea class="form-input" type="text" name="description" placeholder="description"></textarea>
+            <textarea class="form-control" type="text" name="description" placeholder="description"></textarea>
         </div>
 
         <div class="form-group">
-            <input class="form-input" type="text" name="thumb" placeholder="thumb">
-        </div>
-
-        <div>
-            <input type="text" name="price" placeholder="price">
+            <input class="form-control" type="text" name="thumb" placeholder="thumb">
         </div>
 
         <div class="form-group">
-            <input class="form-input" type="text" name="series" placeholder="series">
+            <input type="text" class="form-control" name="price" placeholder="price">
         </div>
 
         <div class="form-group">
-            <input class="form-input" type="date" name="sale_date">
+            <input class="form-control" type="text" name="series" placeholder="series">
         </div>
 
         <div class="form-group">
-            <input class="form-input" type="text" name="type" placeholder="type">
+            <input class="form-control" type="date" name="sale_date">
+        </div>
+
+        <div class="form-group">
+            <input class="form-control" type="text" name="type" placeholder="type">
         </div>
         <button type="submit" class="btn btn-primary">invia</button>
     </form>
