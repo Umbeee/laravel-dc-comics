@@ -28,21 +28,32 @@ class ComicController extends Controller
 
     }
 
-    public function update($id){
+    public function edit(Comic $comic){
 
 
-        $singleComic = Comic::findOrFail( $id );
-        return view( 'pages.update', compact('singleComic') );
+        return view( 'pages.update', compact( 'comic' ) );
 
     }
 
-    public function show ($id){
+    public function update(Request $request, Comic $comic ){
+
+        $form_data = $request->All();
+        $comic->update($form_data);
+
+        return redirect()->route( 'comics.index' );
+    }
+
+    public function show (Comic $comic){
+
+        return view( 'pages.show', compact('comic') );
+
+    }
+
+    public function destroy (Comic $comic){
 
 
-        $singleComic = Comic::findOrFail( $id );
-
-        return view( 'pages.show', compact('singleComic') );
-
+        $comic->delete();
+        return redirect()->route( 'comics.index' );
     }
 
     public function store(Request $request){

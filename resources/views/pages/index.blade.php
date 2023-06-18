@@ -46,14 +46,25 @@
             <div class="row g-4 pb-5">
                 
                 @foreach( $comics as $elem )
-                    <div class="text-start col-2">
-                        <a href="{{ route('comics.show', ['comic'=> $elem->id]  )}}" class="text-reset text-decoration-none">
+                    <div class="text-start col-2 position-relative">
+                        <a href="{{ route('comics.show', $elem  )}}" class="text-reset text-decoration-none">
                             <img class="card-img-top cards-img" src="{{ $elem->thumb }}" alt="{{ $elem->title }}">
-                            <div class="card-body">
-                            <h5 class="card-title">{{ $elem->title }}</h5>
                         </a>
-                      </div>
+                            <div class="card-body align-items-center">
+                                <h5 class="card-title">{{ $elem->title }}</h5>
+                                <div class="d-flex justify-content-center position-absolute top-0  start-50 translate-middle-x"">
+                                    <a href="{{ route('comics.edit', $elem  )}}"  class="text-reset text-decoration-none btn btn-dark">Edit</a>
+                                    <form action=" {{ route('comics.destroy', $elem) }} " method="POST">
+    
+                                        @csrf
+                                        @method('DELETE')
+    
+                                        <button class="btn btn-danger">Delete</a>
+                                    </form>
+                                </div>
+                            </div>
                     </div>
+
                 @endforeach
                 
             </div>

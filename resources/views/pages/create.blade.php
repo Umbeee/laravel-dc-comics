@@ -11,7 +11,7 @@
         </div>
 
         <div class="form-group">
-            <input class="form-input" type="text" name="description" placeholder="description">
+            <textarea class="form-input" type="text" name="description" placeholder="description"></textarea>
         </div>
 
         <div class="form-group">
