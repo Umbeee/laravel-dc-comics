@@ -21,7 +21,6 @@ class ComicController extends Controller
     }
 
 
-
     public function create(){
 
         return view( 'pages.create' );
@@ -57,6 +56,28 @@ class ComicController extends Controller
     }
 
     public function store(Request $request){
+
+        $request->validate(
+            [
+            'title'=>'required|max:20',
+            'description'=>'required',
+            'thumb'=>'required',
+            'price'=>'required',
+            'series'=>'required',
+            'sale_date'=>'required',
+            'type'=>'required'
+            ],
+            [
+                'title.required'=>'Il campo titolo è richiesto',
+                'title.max'=>'Il campo titolo non può superare i 20 caratteri',
+                'description.required'=>'Il campo description è richiesto',
+                'thumb.required'=>'Il campo thumb è richiesto',
+                'price.required'=>'Il campo price è richiesto',
+                'series.required'=>'Il campo series è richiesto',
+                'sale_date.required'=>'Il campo data è richiesto',
+                'type.required'=>'Il campo type è richiesto'
+            ]
+            );
 
         $form_data = $request->All();
 

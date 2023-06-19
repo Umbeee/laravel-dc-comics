@@ -52,8 +52,8 @@
                         </a>
                             <div class="card-body align-items-center">
                                 <h5 class="card-title">{{ $elem->title }}</h5>
-                                <div class="d-flex justify-content-center position-absolute top-0  start-50 translate-middle-x"">
-                                    <a href="{{ route('comics.edit', $elem  )}}"  class="text-reset text-decoration-none btn btn-dark">Edit</a>
+                                <div class="d-flex justify-content-center position-absolute top-0  start-50 translate-middle-x">
+                                    <a href="{{ route('comics.edit', $elem  )}}"  class="text-reset text-decoration-none btn btn-dark mx-2">Edit</a>
                                     <form action=" {{ route('comics.destroy', $elem) }} " method="POST">
     
                                         @csrf
